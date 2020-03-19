@@ -1,0 +1,58 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.6.1'
+        classpath 'androidx.navigation:navigation-safe-args-gradle-plugin:2.3.0-alpha03'
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    configurations = [
+            versionCode      : 100,
+            versionName      : "1.0.0",
+            minSdkVersion    : 23,
+            compileSdkVersion: 29,
+            buildToolsVersion: "29.0.3",
+            targetSdkVersion : 29
+    ]
+
+    libraries = [
+            androidxAppCompatVersion           : "1.1.0",
+            androidxConstraintLayoutVersion    : "1.1.3",
+            androidxRecyclerViewVersion        : "1.1.0",
+            androidxLifecycleExtensionsVersion : "2.2.0",
+            androidxLifecycleCommonJava8Version: "2.2.0",
+            androidxNavigationVersion          : "2.3.0-alpha03",
+            androidxPagingVersion              : "2.1.1",
+
+            timberVersion                      : "4.7.1",
+            materialDialogVersion              : "0.9.6.0",
+            gsonVersion                        : "2.8.6",
+            volleyVersion                      : "1.1.1",
+            glideVersion                       : "4.11.0",
+
+            junitVersion                       : "4.13",
+            androidxTestExtJunitVersion        : "1.1.1",
+            androidxTestEspressoCoreVersion    : "3.2.0"
+    ]
+}
