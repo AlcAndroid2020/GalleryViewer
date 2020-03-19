@@ -1,2 +1,3 @@
 rootProject.name='Alcodes Gallery Viewer Demo'
 include ':app'
+include ':alcodes-sm-gallery-viewer'
