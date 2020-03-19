@@ -1,18 +1,19 @@
 package com.alcodes.alcodesgalleryviewerdemo.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
+import com.alcodes.alcodesgalleryviewerdemo.R;
 import com.alcodes.alcodesgalleryviewerdemo.databinding.ActivityMainBinding;
-import com.alcodes.alcodesgalleryviewerdemo.databinding.bindingcallbacks.MainBindingCallback;
-import com.alcodes.alcodessmgalleryviewer.activities.AsmGvrMainActivity;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.NavigationUI;
 
-public class MainActivity extends AppCompatActivity implements MainBindingCallback {
+public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding mDataBinding;
+    private NavController mNavController;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,19 +24,14 @@ public class MainActivity extends AppCompatActivity implements MainBindingCallba
 
         setContentView(mDataBinding.getRoot());
 
-        mDataBinding.setBindingCallback(this);
+        // Init navigation components.
+        mNavController = Navigation.findNavController(this, R.id.nav_host_fragment);
+
+        NavigationUI.setupActionBarWithNavController(this, mNavController);
     }
 
     @Override
-    public void onLocalFilesDemoButtonClicked() {
-        // TODO
-//        startActivity(new Intent(this, AsmGvrMainActivity.class));
-        Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void onUrlDemoButtonClicked() {
-        // TODO
-        Toast.makeText(this, "Coming soon...", Toast.LENGTH_SHORT).show();
+    public boolean onSupportNavigateUp() {
+        return mNavController.navigateUp() || super.onSupportNavigateUp();
     }
 }

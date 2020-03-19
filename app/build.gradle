@@ -47,9 +47,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
 
     implementation "androidx.appcompat:appcompat:${rootLibraries.androidxAppCompatVersion}"
-    implementation "androidx.constraintlayout:constraintlayout:${rootLibraries.androidxConstraintLayoutVersion}"
+    implementation "androidx.coordinatorlayout:coordinatorlayout:${rootLibraries.androidxCoordinatorLayoutVersion}"
     implementation "androidx.lifecycle:lifecycle-extensions:${rootLibraries.androidxLifecycleExtensionsVersion}"
     implementation "androidx.lifecycle:lifecycle-common-java8:${rootLibraries.androidxLifecycleCommonJava8Version}"
+    implementation "androidx.navigation:navigation-fragment:${rootLibraries.androidxNavigationVersion}"
+    implementation "androidx.navigation:navigation-ui:${rootLibraries.androidxNavigationVersion}"
 
     implementation "com.jakewharton.timber:timber:${rootLibraries.timberVersion}"
     implementation "com.afollestad.material-dialogs:core:${rootLibraries.materialDialogVersion}"
