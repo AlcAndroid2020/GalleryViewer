@@ -56,7 +56,7 @@ dependencies {
     implementation "com.jakewharton.timber:timber:${rootLibraries.timberVersion}"
     implementation "com.afollestad.material-dialogs:core:${rootLibraries.materialDialogVersion}"
 
-    implementation project(":alcodes-sm-gallery-viewer")
+//    implementation project(":alcodes-sm-gallery-viewer")
 
     testImplementation "junit:junit:${rootLibraries.junitVersion}"
     androidTestImplementation "androidx.test.ext:junit:${rootLibraries.androidxTestExtJunitVersion}"

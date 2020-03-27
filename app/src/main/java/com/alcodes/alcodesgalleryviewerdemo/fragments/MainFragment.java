@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import com.alcodes.alcodesgalleryviewerdemo.databinding.FragmentMainBinding;
 import com.alcodes.alcodesgalleryviewerdemo.databinding.bindingcallbacks.MainBindingCallback;
-import com.alcodes.alcodessmgalleryviewer.activities.AsmGvrMainActivity;
+//import com.alcodes.alcodessmgalleryviewer.activities.AsmGvrMainActivity;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -39,7 +39,7 @@ public class MainFragment extends Fragment implements MainBindingCallback {
     @Override
     public void onLocalFilesDemoButtonClicked() {
         // TODO
-        startActivity(new Intent(requireActivity(), AsmGvrMainActivity.class));
+//        startActivity(new Intent(requireActivity(), AsmGvrMainActivity.class));
 //        Toast.makeText(requireActivity(), "Coming soon...", Toast.LENGTH_SHORT).show();
     }
 
